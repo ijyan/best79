@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>대출이자계산기 | BEST79</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap-reset.css">
+
+    <!--font-->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"/>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/css/fontawesome-pro/css/all.css">
+
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/includeHTML.js"></script>
+    <script src="/js/common.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="/img/logo.svg" alt="best79 로고"></a></h1>
+        <nav class="nav nav-01" w3-include-html="layouts/partial/nav.html"></nav>
+        <div class="btn-menu">
+            <span class="btn-menu-line"></span>
+            <span class="btn-menu-line"></span>
+        </div>
+        <span class="submenu-bg"></span>
+    </header>
+    <!--/header-->
+    <main id="main">
+        <div class="cont-title">
+            <h2><span>대출이자계산기</span></h2>
+            <p class="desc">대출금의 상환금액과 이자를 계산합니다.</p>
+            <span class="guide">안내 <i class="fas fa-question-circle"></i></span>
+        </div>
+        <div class="contents">
+            <div class="cont-calc col-md-7">
+                <form action="" class="form">
+                    <div class="form-group">
+                        <h3>상환방법<span><i class="fas fa-question-circle"></i></span></h3>
+                        <div class="input-area">
+                            <div class="select">
+                                <input type="radio" id="repaymentSelect" name="repayment" checked="checked"><label
+                                    for="repaymentSelect">원리금균등</label>
+                                <input type="radio" id="repaymentSelect2" name="repayment"><label
+                                    for="repaymentSelect2">원금균등</label>
+                                <input type="radio" id="repaymentSelect3" name="repayment"><label
+                                    for="repaymentSelect3">만기일시</label>
+                            </div>
+                        </div>
+                        <div class="toolTip pc-toolTip">
+                            <span>대출 상환 방법</span><span class="tipClose"><i class="fal fa-times"></i></span>
+                            <div class="toolTipCont">
+                                <ul>
+                                    <li>원리금균등상환 - 가장 일반적인 방법으로, 원금과 이자를 합한 상환금액이 매달 동일힙니다.</li>
+                                    <li>원금균등상환 - 매달 원금을 동일하게 상환하므로, 이자는 매달 줄어들게 됩니다.</li>
+                                    <li>원금만기일시상환 - 대출기간동안 매달 이자만 상환하고, 대출 만기일에 원금을 일시상환합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>대출금</h3>
+                        <div class="input-area">
+                            <div>
+                                <!-- TODO: form-control에 is-invalid를 추가하면 인풋박스 경고, 경고문 생성
+                                     TODO: 원 - 천단위 ',' 추가
+                                -->
+                                <input type="number" class="input-text form-control is-invalid">
+                                <span class="form-unit">원</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>대출금을 입력해주세요
+                                </div>
+                            </div>
+                            <div class="btn-plus">
+                                <button type="button" class="btn">초기화</button>
+                                <button type="button" class="btn">+1억</button>
+                                <button type="button" class="btn">+1000만</button>
+                                <button type="button" class="btn">+100만</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>대출금리</h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control">
+                                <span class="form-unit">%</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>대출금리를 입력해주세요
+                                </div>
+                            </div>
+                            <div class="btn-plus">
+                                <button type="button" class="btn">초기화</button>
+                                <button type="button" class="btn">+1%</button>
+                                <button type="button" class="btn">+3%</button>
+                                <button type="button" class="btn">+5%</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>대출기간</h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control">
+                                <span class="form-unit">년</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>대출기간을 입력해주세요
+                                </div>
+                            </div>
+                            <div class="btn-plus">
+                                <button type="button" class="btn">초기화</button>
+                                <button type="button" class="btn">+1년</button>
+                                <button type="button" class="btn">+3년</button>
+                                <button type="button" class="btn">+5년</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>거치기간<span><i class="fas fa-question-circle"></i></span></h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control">
+                                <span class="form-unit">년</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>거치기간을 입력해주세요
+                                </div>
+                            </div>
+                            <div class="btn-plus">
+                                <button type="button" class="btn">초기화</button>
+                                <button type="button" class="btn">+1년</button>
+                                <button type="button" class="btn">+3년</button>
+                                <button type="button" class="btn">+5년</button>
+                            </div>
+                        </div>
+                        <div class="toolTip pc-toolTip">
+                            <span>거치기간</span><span class="tipClose"><i class="fal fa-times"></i></span>
+                            <div class="toolTipCont">
+                                <ul>
+                                    <li>거치기간동안 이자만 납부하고, 거치기간이 끝나면 원금+이자를 납부하게 됩니다.
+                                        <br>
+                                        따라서 원리금/원금 균등상환에만 적용됩니다.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-fixed">
+                        <div class="btn-list">
+                            <button type="button" class="btn btn-rewritten">다시작성</button>
+                            <button type="button" class="btn btn-pay">계산하기</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="side-table col-md-4 pc-table" w3-include-html="layouts/partial/pc-side.html"></div>
+        </div>
+    </main>
+    <!--/main-->
+    <div class="layer-popup">
+        <div class="layerPop">
+            <div class="layerCont">
+                <h4>안내<span class="tipClose"><i class="fal fa-times"></i></span></h4>
+                <div class="toolTip">
+                    <div class="toolTipSection">
+                        <span class="layer-contTitle">대출 상환 방법</span>
+                        <div class="toolTipCont">
+                            <ul>
+                                <li>원리금균등상환 - 가장 일반적인 방법으로, 원금과 이자를 합한 상환금액이 매달 동일힙니다.</li>
+                                <li>원금균등상환 - 매달 원금을 동일하게 상환하므로, 이자는 매달 줄어들게 됩니다.</li>
+                                <li>원금만기일시상환 - 대출기간동안 매달 이자만 상환하고, 대출 만기일에 원금을 일시상환합니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toolTipSection">
+                        <span class="layer-contTitle">거치기간</span>
+                        <div class="toolTipCont">
+                            <ul>
+                                <li>거치기간동안 이자만 납부하고, 거치기간이 끝나면 원금+이자를 납부하게 됩니다. 따라서 원리금/원금 균등상환에만 적용됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toolTipSection">
+                        <span class="layer-contTitle">오차 가능성 안내</span>
+                        <div class="toolTipCont">
+                            <ul>
+                                <li>본 대출금 상환 계산기는 월 단위로 계산 한 것이므로, 실제 대출 시작 일자에 일할 계산에 따른 약간의 차이는 있을 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//layer-popup-->
+    <footer id="footer" w3-include-html="layouts/partial/footer.html"></footer>
+</div>
+
+</body>
+</html>

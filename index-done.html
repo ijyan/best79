@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>대출이자계산기 - 계산결과 | BEST79</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap-reset.css">
+
+    <!--font-->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"/>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/css/fontawesome-pro/css/all.css">
+
+    <!--favicon-->
+    <link rel=" shortcut icon" href="/public/favicon/favicon.ico">
+
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/includeHTML.js"></script>
+    <script src="/js/common.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="/img/logo.svg" alt="best79 로고"></a></h1>
+        <nav class="nav nav-01" w3-include-html="layouts/partial/nav.html"></nav>
+        <div class="btn-menu">
+            <span class="btn-menu-line"></span>
+            <span class="btn-menu-line"></span>
+        </div>
+        <span class="submenu-bg"></span>
+    </header>
+    <!--/header-->
+    <main id="main">
+        <div class="cont-title title-result">
+            <h2><span>대출이자계산기</span></h2>
+            <p class="desc">대출금의 상환금액과 이자 계산결과입니다.</p>
+        </div>
+        <div class="contents">
+            <div class="calc-result-cont col-md-6">
+                <div class="cont-calc">
+                    <ul class="calc-result">
+                        <li>
+                            <p>상환방법</p>
+                            <p>원리금균등</p>
+                        </li>
+                        <li>
+                            <p>대출금</p>
+                            <p>100,000,000 원</p>
+                        </li>
+                        <li>
+                            <p>대출금리</p>
+                            <p>3 %</p>
+                        </li>
+                        <li>
+                            <p>대출기간</p>
+                            <p>3 년</p>
+                        </li>
+                        <li>
+                            <p>거치기간</p>
+                            <p>0 년</p>
+                        </li>
+                    </ul>
+                    <div class="btn-fixed">
+                        <div class="btn-list">
+                            <button type="button" class="btn btn-rewritten">공유하기</button>
+                            <button type="button" class="btn btn-pay">다시 계산하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="repayments side-table">
+                    <h2>월별 상환금</h2>
+                    <div class="table-overflow">
+                        <table class="table">
+                            <tr>
+                                <th>No</th>
+                                <th>상환금</th>
+                                <th>납입원금</th>
+                                <th>이자</th>
+                                <th>납입원금계</th>
+                                <th>잔금</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1,657,543</td>
+                                <td>864,213</td>
+                                <td>793,330</td>
+                                <td>864,213</td>
+                                <td>79,135,787</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1,657,543</td>
+                                <td>864,213</td>
+                                <td>793,330</td>
+                                <td>864,213</td>
+                                <td>79,135,787</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1,657,543</td>
+                                <td>864,213</td>
+                                <td>793,330</td>
+                                <td>864,213</td>
+                                <td>79,135,787</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1,657,543</td>
+                                <td>864,213</td>
+                                <td>793,330</td>
+                                <td>864,213</td>
+                                <td>79,135,787</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="saving-side-table side-table col-md-5 pc-table"
+                 w3-include-html="layouts/partial/saving-side-table.html"></div>
+        </div>
+    </main>
+    <!--/main-->
+    <footer id="footer" w3-include-html="layouts/partial/footer.html"></footer>
+</div>
+
+</body>
+</html>

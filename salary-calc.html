@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>연봉계산기 | BEST79</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap-reset.css">
+
+    <!--font-->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"/>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/css/fontawesome-pro/css/all.css">
+
+    <!--favicon-->
+    <link rel=" shortcut icon" href="/public/favicon/favicon.ico">
+
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/includeHTML.js"></script>
+    <script src="/js/common.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="/img/logo.svg" alt="best79 로고"></a></h1>
+        <nav class="nav nav-01" w3-include-html="layouts/partial/nav.html"></nav>
+        <div class="btn-menu">
+            <span class="btn-menu-line"></span>
+            <span class="btn-menu-line"></span>
+        </div>
+        <span class="submenu-bg"></span>
+    </header>
+    <!--/header-->
+    <main id="main">
+        <div class="cont-title">
+            <h2><span>연봉계산기</span></h2>
+            <p class="desc">내 연봉에서 4대보험과 세금을 제외한 실수령액을 계산합니다.</p>
+            <span class="guide">안내 <i class="fas fa-question-circle"></i></span>
+        </div>
+        <div class="contents">
+            <div class="cont-calc col-md-7">
+                <form action="" class="form">
+                    <div class="form-group">
+                        <h3>급여선택</h3>
+                        <div class="input-area">
+                            <div class="select">
+                                <input type="radio" id="salary1" name="salary" checked="checked"><label
+                                    for="salary1">연봉(퇴직금 별도)</label>
+                                <input type="radio" id="salary2" name="salary"><label
+                                    for="salary2">월급</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>연봉 / 월급<span><i class="fas fa-question-circle"></i></span></h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control is-invalid">
+                                <span class="form-unit">원</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>연봉 / 월급을 입력해주세요
+                                </div>
+                            </div>
+                            <div class="btn-plus">
+                                <button type="button" class="btn">초기화</button>
+                                <button type="button" class="btn">+1억</button>
+                                <button type="button" class="btn">+1000만</button>
+                                <button type="button" class="btn">+100만</button>
+                            </div>
+                        </div>
+                        <div class="toolTip pc-toolTip">
+                            <span>계산 근거 자료</span><span class="tipClose"><i class="fal fa-times"></i></span>
+                            <div class="toolTipCont">
+                                <ul>
+                                    <li>국민연금 - 기본 요율 9%, 2018년 7월부터 기준소득월액 상한액 변경(30 ~ 468만원)</li>
+                                    <li>건강보험 - 2019년 1월부터 6.24% -> 6.46% 변경</li>
+                                    <li>고용보험 - 2013년 7월부터 0.65% 변경분 반영</li>
+                                    <li>소 득 세 - 2018년 2월 개정된 근로소득 간이세액표 반영 (100% 적용시 기준)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>부양가족수</h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control" value="1">
+                                <span class="form-unit">명</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>부양가족수를 입력해주세요
+                                </div>
+                            </div>
+                            <div class="btn-plus">
+                                <button type="button" class="btn">초기화</button>
+                                <button type="button" class="btn">+1%</button>
+                                <button type="button" class="btn">+3%</button>
+                                <button type="button" class="btn">+5%</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>20세이하 자녀수</h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control" value="0">
+                                <span class="form-unit">명</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>20세이하 자녀수를 입력해주세요
+                                </div>
+                            </div>
+                            <div class="btn-plus">
+                                <button type="button" class="btn">초기화</button>
+                                <button type="button" class="btn">+1명</button>
+                                <button type="button" class="btn">+3명</button>
+                                <button type="button" class="btn">+5명</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>비과세액<span><i class="fas fa-question-circle"></i></span></h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control" value="100000">
+                                <span class="form-unit">원</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>비과세액을 입력해주세요
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolTip pc-toolTip">
+                            <span>비과세액</span><span class="tipClose"><i class="fal fa-times"></i></span>
+                            <div class="toolTipCont">
+                                <ul>
+                                    <li>식대 10만원이 기본이며, 직접 수정가능합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-fixed">
+                        <div class="btn-list">
+                            <button type="button" class="btn btn-rewritten">다시작성</button>
+                            <button type="button" class="btn btn-pay">계산하기</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="side-table col-md-4 pc-table" w3-include-html="layouts/partial/pc-side.html"></div>
+        </div>
+    </main>
+    <!--/main-->
+    <div class="layer-popup">
+        <div class="layerPop">
+            <div class="layerCont">
+                <h4>안내<span class="tipClose"><i class="fal fa-times"></i></span></h4>
+                <div class="toolTip">
+                    <div class="toolTipSection">
+                        <span class="layer-contTitle">계산 근거 자료</span>
+                        <div class="toolTipCont">
+                            <ul>
+                                <li>국민연금 - 기본 요율 9%, 2018년 7월부터 기준소득월액 상한액 변경(30 ~ 468만원)</li>
+                                <li>건강보험 - 2019년 1월부터 6.24% -> 6.46% 변경</li>
+                                <li>고용보험 - 2013년 7월부터 0.65% 변경분 반영</li>
+                                <li>소 득 세 - 2018년 2월 개정된 근로소득 간이세액표 반영 (100% 적용시 기준)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="toolTipSection">
+                        <span class="layer-contTitle">오차 가능성 안내</span>
+                        <div class="toolTipCont">
+                            <ul>
+                                <li>실제 지급 조건, 과거 소득, 비과세액 등에 따라 약간의 차이가 있을 수 있습니다.</li>
+                                <li>연봉계산기의 계산 결과는 '근로자 부담분'만 표시됩니다. 즉 국민연금 9% 기준으로 '근로자 부담분 50%'인 4.5%만 계산됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//layer-popup-->
+    <footer id="footer" w3-include-html="layouts/partial/footer.html"></footer>
+</div>
+
+</body>
+</html>

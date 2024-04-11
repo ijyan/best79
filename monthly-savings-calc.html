@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>적금 계산 - 월 납입액 | BEST79</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap-reset.css">
+
+    <!--font-->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"/>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/css/fontawesome-pro/css/all.css">
+
+    <!--favicon-->
+    <link rel=" shortcut icon" href="/public/favicon/favicon.ico">
+
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/includeHTML.js"></script>
+    <script src="/js/common.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <h1 class="logo"><a href="index.html"><img src="/img/logo.svg" alt="best79 로고"></a></h1>
+        <nav class="nav nav-02" w3-include-html="layouts/partial/nav.html"></nav>
+        <div class="btn-menu">
+            <span class="btn-menu-line"></span>
+            <span class="btn-menu-line"></span>
+        </div>
+        <span class="submenu-bg"></span>
+    </header>
+    <!--/header-->
+    <main id="main">
+        <div class="cont-title">
+            <h2><span>적금 계산 - 월 납입액</span></h2>
+            <p class="desc">매월 일정액을 목표기간동안 저축했을 때 만기지급액과 이자를 자세히 보실 수 있습니다.</p>
+        </div>
+        <div class="contents">
+            <div class="cont-calc col-md-7">
+                <form class="form">
+                    <div class="form-group">
+                        <h3>월 납입액</h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control is-invalid">
+                                <span class="form-unit">원</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>월 납입액을 입력해주세요
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>목표기간</h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control">
+                                <span class="form-unit">개월</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>목표기간을 입력해주세요
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>이자방식</h3>
+                        <div class="input-area">
+                            <div class="select">
+                                <input type="radio" id="interestSelect1" name="interestRate" checked="checked"><label
+                                    for="interestSelect1">단리</label>
+                                <input type="radio" id="interestSelect2" name="interestRate"><label
+                                    for="interestSelect2">복리</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>연 이자율</h3>
+                        <div class="input-area">
+                            <div>
+                                <input type="number" class="input-text form-control">
+                                <span class="form-unit">%</span>
+                                <div class="invalid-feedback">
+                                    <i class="fal fa-exclamation-circle"></i>연 이자율을 입력해주세요
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-fixed">
+                        <div class="btn-list">
+                            <button type="button" class="btn btn-rewritten">다시작성</button>
+                            <button type="button" class="btn btn-pay">계산하기</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="side-table col-md-4 pc-table" w3-include-html="layouts/partial/pc-side.html"></div>
+        </div>
+    </main>
+    <!--/main-->
+    <footer id="footer" w3-include-html="layouts/partial/footer.html"></footer>
+</div>
+
+</body>
+</html>
